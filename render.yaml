@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: gyumri-demo-victoria
+    runtime: static
+    buildCommand: "true"
+    staticPublishPath: ./victoria
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
+  - type: web
+    name: gyumri-demo-zemlyanka
+    runtime: static
+    buildCommand: "true"
+    staticPublishPath: ./zemlyanka
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
+  - type: web
+    name: gyumri-demo-make-it-sweet
+    runtime: static
+    buildCommand: "true"
+    staticPublishPath: ./make-it-sweet
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
+  - type: web
+    name: gyumri-demo-ars-elite-cakes
+    runtime: static
+    buildCommand: "true"
+    staticPublishPath: ./ars-elite-cakes
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
+  - type: web
+    name: gyumri-demo-gyumri-fountains
+    runtime: static
+    buildCommand: "true"
+    staticPublishPath: ./gyumri-fountains
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
