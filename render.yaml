@@ -44,3 +44,12 @@ services:
       - path: /*
         name: X-Robots-Tag
         value: noindex, nofollow
+  - type: web
+    name: gyumri-cake-studios
+    runtime: static
+    buildCommand: sh build-pastry-demos.sh
+    staticPublishPath: ./pastry-public
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow

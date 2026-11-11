@@ -1,0 +1,11 @@
+# DaDa Sweets demo — checked 2026-11-11
+- Business name and city Gyumri: https://www.restaurants10.com/AM/Gyumri/102022299149086/DaDa-Sweets
+- Public Facebook linked by that business listing: https://www.facebook.com/102022299149086/
+- Mirrored posts dated 2026-05-08 explicitly mention preliminary orders, personal names/thematic decoration, and flowers made of cookies. Most recent visible mirrored post: 2026-05-14. These are archived examples, NOT evidence of present-day availability or current offers. Site does not repeat the old graduation promotion as an active offer.
+- No verified public phone, precise street address, opening hours or current prices found. UI uses Facebook, Gyumri and 'Ճշտեք' only.
+- Genuine photo URLs were discovered in the above listing but could not be downloaded reliably (403/404); none is used:
+  - https://img3.restaurants10.com/673/982/960446176739826.jpg
+  - https://img4.restaurants10.com/724/459/955398467244597.jpg
+  - https://img4.restaurants10.com/391/182/955392833911827.jpg
+- Instead all images in assets are original decorative SVG illustrations, explicitly labelled as illustrations, not photographs of the business's products. No external/stock photographs are misattributed.
+- Site is unofficial demo, noindex/nofollow, includes exact requested Armenian footer. No forms, payments, account systems, invented courses, fake reviews or pricing.
