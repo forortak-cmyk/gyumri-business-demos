@@ -16,3 +16,113 @@ button.text-link{background:transparent;border:0;border-bottom:1px solid var(--l
 
 @media(max-width:800px){.main-nav a{font-size:11px}.hero-copy{padding-block:30px}.hero-copy .actions{gap:12px}.hero-copy .text-link{font-size:11px}.hero-copy .button{padding-inline:17px;gap:12px;font-size:11px}}
 @media(max-width:380px){.main-nav a{font-size:10px}}
+
+/* ArS Atelier refinement — presentation only; original palette retained. */
+:root{--atelier-ease:cubic-bezier(.22,.68,.2,1)}
+.site-header{box-shadow:0 12px 30px -30px var(--wine)}
+.brand{transition:letter-spacing .45s var(--atelier-ease),transform .45s var(--atelier-ease)}
+.brand span{transition:letter-spacing .45s var(--atelier-ease)}
+.main-nav a:after{transition:transform .4s var(--atelier-ease);transform-origin:right}
+.main-nav a:hover:after,.main-nav a[aria-current=page]:after{transform-origin:left}
+.account-link{transition:transform .3s var(--atelier-ease),box-shadow .3s var(--atelier-ease),background .3s,border-color .3s}
+.button{position:relative;border-radius:4px;isolation:isolate;transition:transform .35s var(--atelier-ease),box-shadow .35s var(--atelier-ease),background .3s,color .3s}
+.button:before{content:'';position:absolute;inset:5px;border:1px solid currentColor;border-radius:1px;opacity:0;pointer-events:none;transition:opacity .35s var(--atelier-ease),inset .35s var(--atelier-ease)}
+.button svg,.text-link svg,.account-link svg{transition:transform .4s var(--atelier-ease)}
+.button:active:not(:disabled){transform:translateY(0) scale(.985)}
+.text-link{position:relative;transition:gap .35s var(--atelier-ease),border-color .3s}
+.hero-copy>.eyebrow{animation:atelier-enter .7s var(--atelier-ease) both}
+.hero-copy>h1{animation:atelier-enter .85s .08s var(--atelier-ease) both}
+.hero-copy>p{animation:atelier-enter .85s .16s var(--atelier-ease) both}
+.hero-copy>.actions{animation:atelier-enter .85s .24s var(--atelier-ease) both}
+.hero-art:before{pointer-events:none;animation:atelier-frame 1.2s .12s var(--atelier-ease) both}
+.hero-art:after{content:'';position:absolute;inset:44px;border:1px solid var(--line);border-radius:48% 48% 2px 2px;pointer-events:none;transform:rotate(-3deg);animation:atelier-contour 1.4s .18s var(--atelier-ease) both}
+.hero-art img{transition:transform .8s var(--atelier-ease),border-radius .8s var(--atelier-ease)}
+.art-label{z-index:1;border-radius:3px;animation:atelier-enter .85s .35s var(--atelier-ease) both}
+.card-image{border-radius:14px;transition:border-color .35s,box-shadow .5s var(--atelier-ease),transform .5s var(--atelier-ease)}
+.card-image img{border-radius:7px;transition:transform .85s var(--atelier-ease)}
+.product-card h3 a{transition:letter-spacing .35s var(--atelier-ease)}
+.card-details summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.card-details summary::-webkit-details-marker{display:none}
+.card-details summary:after{content:'+';font:22px/1 Georgia,serif;flex-shrink:0;transition:transform .3s var(--atelier-ease)}
+.card-details[open] summary:after{transform:rotate(45deg)}
+.card-details[open]>p{animation:atelier-detail .3s var(--atelier-ease) both}
+.editorial-img{border-radius:160px 160px 12px 12px}
+.editorial-img img{border-radius:145px 145px 5px 5px;transition:transform .8s var(--atelier-ease)}
+.course-card{border-radius:16px;overflow:clip;transition:box-shadow .5s var(--atelier-ease),border-color .4s}
+.course-image img{transition:transform .9s var(--atelier-ease)}
+.course-image .pill{backdrop-filter:blur(8px)}
+.course-detail-image{border-radius:14px}
+.course-purchase,.form-card,.payment-panel,.request-card,.admin-editor,.lesson-aside,.account-settings,.order-card{border-radius:12px;box-shadow:0 14px 40px -38px var(--wine)}
+.future-card,.callout,.empty{border-radius:12px}
+.future-card{transition:border-color .4s,transform .4s var(--atelier-ease)}
+.page-intro>.eyebrow{animation:atelier-enter .6s var(--atelier-ease) both}
+.page-intro>h1{animation:atelier-enter .75s .06s var(--atelier-ease) both}
+.page-intro>p{animation:atelier-enter .75s .13s var(--atelier-ease) both}
+.page-intro .crumb{animation:atelier-detail .5s var(--atelier-ease) both}
+.filter{transition:transform .3s var(--atelier-ease),box-shadow .3s var(--atelier-ease),background .3s,color .3s,border-color .3s}
+.filter:active{transform:scale(.97)}
+.form-card input,.field input,.field textarea,.field select{border-radius:6px;transition:border-color .25s,box-shadow .3s var(--atelier-ease)}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--wine);box-shadow:0 0 0 3px var(--line)}
+.password-row{border-radius:6px;transition:border-color .25s,box-shadow .3s var(--atelier-ease)}
+.password-row:focus-within{border-color:var(--wine);box-shadow:0 0 0 3px var(--line)}
+.password-row input{background:transparent;box-shadow:none}
+.password-row button{border-radius:0 6px 6px 0}
+.auth-tabs button,.lesson-tabs button{transition:border-color .3s,color .3s,transform .3s var(--atelier-ease)}
+.order-card,.request-card{transition:border-color .4s,box-shadow .4s var(--atelier-ease)}
+.account-settings[open]>form,.admin-editor[open]>form{animation:atelier-detail .35s var(--atelier-ease) both}
+.video-wrap{border-radius:12px;overflow:clip}
+.contact-photo{border-radius:140px 140px 10px 10px}
+.contact-block{transition:border-color .4s}
+.footer-links a{position:relative;transition:transform .3s var(--atelier-ease)}
+.footer-links a:after{content:'';position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s var(--atelier-ease)}
+dialog{border-radius:14px;box-shadow:0 14px 50px -20px var(--wine)}
+dialog[open]{animation:atelier-dialog .28s var(--atelier-ease) both}
+dialog[open]::backdrop{animation:atelier-backdrop .25s ease both}
+dialog button{border-radius:5px}
+.reveal{animation:atelier-enter .8s var(--atelier-ease) both}
+.grid-three>.product-card:nth-child(2){animation-delay:.08s}
+.grid-three>.product-card:nth-child(3){animation-delay:.16s}
+@media(hover:hover) and (pointer:fine){
+ .brand:hover{transform:translateY(-1px)}
+ .brand:hover span{letter-spacing:.27em}
+ .account-link:hover{transform:translateY(-2px);box-shadow:0 8px 18px -15px var(--wine)}
+ .button:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 10px 24px -20px var(--wine)}
+ .button:hover:before{inset:4px;opacity:.2}
+ .button:hover svg,.text-link:hover svg{transform:translate(3px,-3px)}
+ .text-link:hover{gap:19px}
+ .product-card:hover .card-image{border-color:var(--wine);box-shadow:0 16px 32px -30px var(--wine)}
+ .card-image:hover img{transform:scale(1.045)}
+ .course-card:hover{box-shadow:0 22px 45px -40px var(--wine);border-color:var(--wine)}
+ .course-card:hover .course-image img{transform:scale(1.04)}
+ .future-card:hover{transform:translateY(-3px);border-color:var(--wine)}
+ .order-card:hover,.request-card:hover{border-color:var(--wine)}
+ .footer-links a:hover:after{transform:scaleX(1)}
+}
+@keyframes atelier-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes atelier-detail{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes atelier-frame{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+@keyframes atelier-contour{from{opacity:0;transform:rotate(0) scale(.98)}to{opacity:1;transform:rotate(-3deg) scale(1)}}
+@keyframes atelier-dialog{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes atelier-backdrop{from{opacity:0}to{opacity:1}}
+@keyframes atelier-scroll{from{opacity:.55;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@supports(animation-timeline:view()){
+ @media(prefers-reduced-motion:no-preference){
+  .product-card,.course-card,.future-card,.callout,.intro.reveal,.section-top,.rose-panel .editorial-img{
+   animation:atelier-scroll linear both;animation-timeline:view();animation-range:entry 0% entry 28%;animation-delay:0s;
+  }
+ }
+}
+@media(max-width:800px){
+ .hero-art:after{inset:30px 13%;border-radius:45% 45% 2px 2px}
+ .card-image{border-radius:10px}
+ .card-image img{border-radius:5px}
+ .course-card{border-radius:12px}
+ .course-purchase,.form-card,.payment-panel,.request-card,.admin-editor,.lesson-aside,.account-settings,.order-card{border-radius:10px}
+ .editorial-img{border-radius:110px 110px 10px 10px}
+ .editorial-img img{border-radius:100px 100px 4px 4px}
+ .contact-photo{border-radius:100px 100px 10px 10px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*:before,*:after{animation:none!important;transition:none!important}
+}
