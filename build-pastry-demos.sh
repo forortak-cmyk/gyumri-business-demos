@@ -9,3 +9,6 @@ for site in caramel-cakes red-velvet-bakery luna-sweets gyumri-candy arpi-jelly 
   if [ -d "$site/assets" ]; then cp -R "$site/assets" "pastry-public/$site/"; fi
 done
 cp pastry-index.html pastry-public/index.html
+
+# Beauty demos share the existing static host.
+if [ -d beauty ]; then cp -R beauty pastry-public/; fi
