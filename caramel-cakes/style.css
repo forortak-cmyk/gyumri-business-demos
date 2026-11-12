@@ -5,3 +5,39 @@
  :root{--paper:#f8f3e9;--ink:#4d352b;--muted:#8b7162;--accent:#96705d;--tint:#ebe0d2;--line:#4d352b30}.caramel .brand{font-style:italic;font-size:34px}.caramel .hero-art{background:#e9ddd0;border-radius:220px 220px 2px 2px;padding:25px;border:1px solid var(--line)}.caramel .hero-art:before{content:'';position:absolute;inset:14px;border:1px solid #4d352b25;border-radius:210px 210px 0 0}.caramel .hero-art .art{padding:45px 20px;position:relative}.caramel .hero-copy h1 em{font-weight:400;color:#a37e66}.caramel .home-address{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-block:1px solid var(--line);font-size:10px;letter-spacing:.05em}.caramel .wordmark{font:italic clamp(70px,16vw,220px)/1.3 'Noto Serif Armenian',Georgia;text-align:center;letter-spacing:-.06em;color:#4d352b18;overflow:hidden}@media(max-width:800px){.caramel .brand{font-size:28px}.caramel .hero-art{max-width:360px;width:100%;margin:auto}.caramel .hero-art .art{height:310px;padding:30px 15px}.caramel .home-address{font-size:9px;flex-wrap:wrap;gap:8px}.caramel .wordmark{font-size:23vw}}
 
 .ui-arrow{width:1em;height:1em;display:inline-block;vertical-align:middle;flex-shrink:0}
+
+/* Modern refinement 2026 — presentation only, original palette preserved. */
+:root{--refine-ease:cubic-bezier(.22,.68,.2,1)}
+.button,.btn,.pill,.filter,.round-cta,.line-link,.link{transition:transform .35s var(--refine-ease),border-radius .35s var(--refine-ease),box-shadow .35s var(--refine-ease)}
+.button,.btn{position:relative;isolation:isolate}
+.button:after,.btn:after{content:'';position:absolute;inset:5px;border:1px solid currentColor;border-radius:inherit;opacity:0;pointer-events:none;transition:opacity .3s,inset .3s}
+.button:active,.btn:active,.filter:active{transform:scale(.985)}
+.ui-arrow{transition:transform .35s var(--refine-ease)}
+.photo,.image-button,.catalog-item,.menu-item,.outline-card,.future-card{transition:transform .5s var(--refine-ease),border-radius .5s var(--refine-ease)}
+.photo img,.image-button img,.hero-art img,.hero-visual img,.hero-image img,.hero-photo img{transition:transform .8s var(--refine-ease),border-radius .8s var(--refine-ease)}
+.hero h1,.hero-top h1{animation:refine-enter .85s var(--refine-ease) both}
+.hero .eyebrow,.hero .kicker{animation:refine-enter .65s var(--refine-ease) both}
+.hero-copy>p,.hero>div>p{animation:refine-enter .85s .12s var(--refine-ease) both}
+.hero .actions{animation:refine-enter .85s .2s var(--refine-ease) both}
+.page-top h1,.page-intro h1{animation:refine-enter .75s var(--refine-ease) both}
+input,textarea,select{transition:border-radius .3s,outline-offset .3s}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline-offset:4px}
+details[open]>p{animation:refine-detail .3s var(--refine-ease) both}
+dialog{border-radius:14px}
+dialog[open]{animation:refine-dialog .25s var(--refine-ease) both}
+dialog[open]::backdrop{animation:refine-backdrop .25s ease both}
+@media(hover:hover) and (pointer:fine){
+.button:hover,.btn:hover,.pill:hover,.round-cta:hover{transform:translateY(-3px)}
+.button:hover:after,.btn:hover:after{opacity:.22;inset:4px}
+.button:hover .ui-arrow,.btn:hover .ui-arrow,.link:hover .ui-arrow,.line-link:hover .ui-arrow{transform:translate(3px,-3px)}
+.catalog-item:hover,.menu-item:hover,.outline-card:hover{transform:translateY(-4px)}
+.photo:hover img,.image-button:hover img{transform:scale(1.035)}
+.filter:hover{transform:translateY(-2px)}
+}
+@keyframes refine-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes refine-detail{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes refine-dialog{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes refine-backdrop{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+.photo-frame{border-radius:140px 140px 12px 12px;overflow:hidden}.catalog-item{border-radius:12px}.sample-art{border-radius:10px}.outline-card,.callout{border-radius:12px}.btn{border-radius:4px}.contact-row{transition:padding .3s var(--refine-ease)}@media(hover:hover){.contact-row:hover{padding-left:8px}}

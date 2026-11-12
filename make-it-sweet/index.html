@@ -12,7 +12,43 @@ img{max-width:100%}button,a,input{-webkit-tap-highlight-color:transparent}a,butt
 body{font-size:15px;line-height:1.75}main,section,article,header,footer,section>div{min-width:0}h1,h2,h3,p,a{overflow-wrap:anywhere}h1,h2,h3{text-wrap:balance}p{text-wrap:pretty}header{gap:12px}header>a[href^="tel:"]{min-height:44px;display:inline-flex;align-items:center;white-space:nowrap;font-size:11px}button,.btn,.button,.pill,.line-link{min-height:44px}.btn,.button,.pill{max-width:100%;font-size:13px!important;line-height:1.6!important}.photo span{line-height:1.6}dialog{max-width:calc(100vw - 24px);max-height:calc(100svh - 24px)}dialog button{min-width:44px;min-height:44px}footer,.footer{padding-bottom:110px!important}.mobile-contact{position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;min-height:54px;background:var(--ink,var(--wine,#302b26));color:var(--paper,var(--cream,#fff8ec));border:1px solid currentColor;border-radius:28px;box-shadow:0 8px 28px #0002;font:500 13px/1.5 'Noto Sans Armenian',sans-serif}.mobile-contact span:last-child{font-size:12px;white-space:nowrap}
 }
 @media(min-width:801px){.mobile-contact{display:none}}
-@media(max-width:650px){.hero{padding-top:28px}.hero h1{font-size:clamp(34px,9.8vw,46px)!important}.hero-art{margin-top:24px}.hero p{font-size:14px;line-height:1.85}.mobile-cta.pill{bottom:calc(12px + env(safe-area-inset-bottom));left:16px;right:16px;min-height:54px;padding:14px 20px}.card h3{font-size:15px!important}.card .caption{font-size:11px}.hero-foot{font-size:9px}.photo-frame img{height:310px}}</style></head><body>
+@media(max-width:650px){.hero{padding-top:28px}.hero h1{font-size:clamp(34px,9.8vw,46px)!important}.hero-art{margin-top:24px}.hero p{font-size:14px;line-height:1.85}.mobile-cta.pill{bottom:calc(12px + env(safe-area-inset-bottom));left:16px;right:16px;min-height:54px;padding:14px 20px}.card h3{font-size:15px!important}.card .caption{font-size:11px}.hero-foot{font-size:9px}.photo-frame img{height:310px}}
+/* Modern refinement 2026 — presentation only, original palette preserved. */
+:root{--refine-ease:cubic-bezier(.22,.68,.2,1)}
+.button,.btn,.pill,.filter,.round-cta,.line-link,.link{transition:transform .35s var(--refine-ease),border-radius .35s var(--refine-ease),box-shadow .35s var(--refine-ease)}
+.button,.btn{position:relative;isolation:isolate}
+.button:after,.btn:after{content:'';position:absolute;inset:5px;border:1px solid currentColor;border-radius:inherit;opacity:0;pointer-events:none;transition:opacity .3s,inset .3s}
+.button:active,.btn:active,.filter:active{transform:scale(.985)}
+.ui-arrow{transition:transform .35s var(--refine-ease)}
+.photo,.image-button,.catalog-item,.menu-item,.outline-card,.future-card{transition:transform .5s var(--refine-ease),border-radius .5s var(--refine-ease)}
+.photo img,.image-button img,.hero-art img,.hero-visual img,.hero-image img,.hero-photo img{transition:transform .8s var(--refine-ease),border-radius .8s var(--refine-ease)}
+.hero h1,.hero-top h1{animation:refine-enter .85s var(--refine-ease) both}
+.hero .eyebrow,.hero .kicker{animation:refine-enter .65s var(--refine-ease) both}
+.hero-copy>p,.hero>div>p{animation:refine-enter .85s .12s var(--refine-ease) both}
+.hero .actions{animation:refine-enter .85s .2s var(--refine-ease) both}
+.page-top h1,.page-intro h1{animation:refine-enter .75s var(--refine-ease) both}
+input,textarea,select{transition:border-radius .3s,outline-offset .3s}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline-offset:4px}
+details[open]>p{animation:refine-detail .3s var(--refine-ease) both}
+dialog{border-radius:14px}
+dialog[open]{animation:refine-dialog .25s var(--refine-ease) both}
+dialog[open]::backdrop{animation:refine-backdrop .25s ease both}
+@media(hover:hover) and (pointer:fine){
+.button:hover,.btn:hover,.pill:hover,.round-cta:hover{transform:translateY(-3px)}
+.button:hover:after,.btn:hover:after{opacity:.22;inset:4px}
+.button:hover .ui-arrow,.btn:hover .ui-arrow,.link:hover .ui-arrow,.line-link:hover .ui-arrow{transform:translate(3px,-3px)}
+.catalog-item:hover,.menu-item:hover,.outline-card:hover{transform:translateY(-4px)}
+.photo:hover img,.image-button:hover img{transform:scale(1.035)}
+.filter:hover{transform:translateY(-2px)}
+}
+@keyframes refine-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes refine-detail{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes refine-dialog{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes refine-backdrop{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+.photo-frame{border-radius:150px 150px 16px 16px;overflow:hidden}.picture{border-radius:16px;overflow:hidden}.step{border-radius:12px}.faq details{transition:padding .3s var(--refine-ease)}.expand{transition:transform .3s var(--refine-ease)}details[open] .expand{transform:rotate(45deg)}@media(max-width:650px){.photo-frame{border-radius:95px 95px 12px 12px}}
+</style></head><body>
 <div class="demo">ՈՉ ՊԱՇՏՈՆԱԿԱՆ ՑՈՒՑԱԴՐԱԿԱՆ ԿԱՅՔ · ԴԻԶԱՅՆԻ ԱՌԱՋԱՐԿ</div>
 <header><a class="logo" href="#top" aria-label="Make It Sweet — վերադառնալ սկիզբ">make it <span>sweet.</span></a><nav aria-label="Հիմնական ընտրացանկ"><a href="#collection">Տորթեր</a><a href="#occasions">Առիթներ</a><a href="#order">Ինչպես պատվիրել</a></nav><a class="pill" href="https://www.instagram.com/makeitsweet65/" target="_blank" rel="noopener noreferrer">Instagram <svg class="ui-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></header>
 <main id="top"><section class="hero"><div class="wrap"><div class="reveal"><div class="eyebrow">Հրուշակեղեն · Գյումրի, Հայաստան</div><h1>Թող լինի<br>մի քիչ <em>քաղցր։</em></h1><p>Ծննդյան օր, մեծ տոն կամ միասին հավաքվելու փոքրիկ առիթ։ Ձեր քաղցր պատմությունը սկսեք Make It Sweet-ի հետ։</p><a class="pill dark" href="#collection">Գտնել ոգեշնչում <span><svg class="ui-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></div><div class="hero-art reveal"><figure class="photo-frame"><img data-photo="4" alt="Make It Sweet Gyumri-ի տորթ՝ կատվի տեսքով թխվածքաբլիթով" fetchpriority="high"><figcaption>ձեր երջանիկ պահերի համար</figcaption></figure><span class="spark" aria-hidden="true">✳</span><div class="sticker">ՔԱՂՑՐ<br>ԱՌԻԹ՝<br>ԺՊՏԱԼՈՒ</div></div></div><div class="wrap" style="display:block"><div class="hero-foot"><span>MAKE IT SWEET GYUMRI</span><span>ՏՈՐԹԵՐ · ԹԽՎԱԾՔԱԲԼԻԹՆԵՐ · ՁԵՐ ԳԱՂԱՓԱՐՆԵՐԸ</span><a href="#collection">ՇԱՐՈՒՆԱԿԵՔ ՆԵՐՔԵՎ ↓</a></div></div></section>

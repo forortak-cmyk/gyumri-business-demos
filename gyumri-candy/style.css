@@ -5,3 +5,39 @@
  :root{--paper:#f7f3f4;--ink:#37293d;--muted:#806c84;--accent:#946379;--tint:#eadce3;--line:#37293d28}.candy .brand{font-family:'Noto Sans Armenian',Arial;font-weight:600;font-size:23px;letter-spacing:-.07em}.candy .brand b{font-weight:400;color:#ac6885}.candy .hero{gap:8%;padding-block:60px}.candy .hero-copy h1{font-size:clamp(42px,5vw,75px);letter-spacing:-.055em}.candy .hero-copy h1 em{font-weight:400;color:#aa708d}.candy .hero-art{padding:30px;border:1px solid var(--line);background:#f1e9ed;transform:rotate(2deg)}.candy .hero-art .art{height:450px;object-fit:contain;mix-blend-mode:multiply}.candy .hero-art:after{content:'GYUMRI / CANDY';position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:8px;letter-spacing:.3em}.candy .hero-art .art-note{margin:0 0 10px}.candy .hero-note{font-size:10px;color:var(--muted);padding-top:25px;max-width:450px}.candy .outline-grid{border:0;gap:20px}.candy .outline-card{border:1px solid var(--line);border-radius:150px 150px 0 0;padding:45px 28px 30px}.candy .outline-card .num{margin-bottom:35px}.candy .catalog-item{border-radius:18px}.candy .sample-art{border:0;border-radius:12px}.candy .banner-word{font:clamp(55px,10vw,135px)/1.3 'Noto Serif Armenian',Georgia;letter-spacing:-.05em;margin:0;text-align:center}.candy .round{border-radius:100px}.candy .photo-frame img{object-fit:contain;background:#f0e9eb}@media(max-width:800px){.candy .brand{font-size:20px}.candy .hero{padding-top:35px;gap:28px}.candy .hero-copy h1{font-size:clamp(35px,9vw,48px)}.candy .hero-art{padding:20px;max-width:350px;width:100%;margin:auto}.candy .hero-art .art{height:290px}.candy .outline-card{border-radius:80px 80px 0 0;padding:35px 28px}.candy .banner-word{font-size:40px}}
 
 .ui-arrow{width:1em;height:1em;display:inline-block;vertical-align:middle;flex-shrink:0}
+
+/* Modern refinement 2026 — presentation only, original palette preserved. */
+:root{--refine-ease:cubic-bezier(.22,.68,.2,1)}
+.button,.btn,.pill,.filter,.round-cta,.line-link,.link{transition:transform .35s var(--refine-ease),border-radius .35s var(--refine-ease),box-shadow .35s var(--refine-ease)}
+.button,.btn{position:relative;isolation:isolate}
+.button:after,.btn:after{content:'';position:absolute;inset:5px;border:1px solid currentColor;border-radius:inherit;opacity:0;pointer-events:none;transition:opacity .3s,inset .3s}
+.button:active,.btn:active,.filter:active{transform:scale(.985)}
+.ui-arrow{transition:transform .35s var(--refine-ease)}
+.photo,.image-button,.catalog-item,.menu-item,.outline-card,.future-card{transition:transform .5s var(--refine-ease),border-radius .5s var(--refine-ease)}
+.photo img,.image-button img,.hero-art img,.hero-visual img,.hero-image img,.hero-photo img{transition:transform .8s var(--refine-ease),border-radius .8s var(--refine-ease)}
+.hero h1,.hero-top h1{animation:refine-enter .85s var(--refine-ease) both}
+.hero .eyebrow,.hero .kicker{animation:refine-enter .65s var(--refine-ease) both}
+.hero-copy>p,.hero>div>p{animation:refine-enter .85s .12s var(--refine-ease) both}
+.hero .actions{animation:refine-enter .85s .2s var(--refine-ease) both}
+.page-top h1,.page-intro h1{animation:refine-enter .75s var(--refine-ease) both}
+input,textarea,select{transition:border-radius .3s,outline-offset .3s}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline-offset:4px}
+details[open]>p{animation:refine-detail .3s var(--refine-ease) both}
+dialog{border-radius:14px}
+dialog[open]{animation:refine-dialog .25s var(--refine-ease) both}
+dialog[open]::backdrop{animation:refine-backdrop .25s ease both}
+@media(hover:hover) and (pointer:fine){
+.button:hover,.btn:hover,.pill:hover,.round-cta:hover{transform:translateY(-3px)}
+.button:hover:after,.btn:hover:after{opacity:.22;inset:4px}
+.button:hover .ui-arrow,.btn:hover .ui-arrow,.link:hover .ui-arrow,.line-link:hover .ui-arrow{transform:translate(3px,-3px)}
+.catalog-item:hover,.menu-item:hover,.outline-card:hover{transform:translateY(-4px)}
+.photo:hover img,.image-button:hover img{transform:scale(1.035)}
+.filter:hover{transform:translateY(-2px)}
+}
+@keyframes refine-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes refine-detail{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes refine-dialog{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes refine-backdrop{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+.catalog-item,.outline-card,.callout{border-radius:16px}.sample-art{border-radius:10px}.photo-frame{border-radius:12px;overflow:hidden}.hero-art{transition:transform .7s var(--refine-ease)}.contact-row{transition:padding .3s var(--refine-ease)}@media(hover:hover){.contact-row:hover{padding-left:8px}}
