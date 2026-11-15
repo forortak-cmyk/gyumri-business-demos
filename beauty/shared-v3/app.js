@@ -1,0 +1,5 @@
+const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav');
+menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav){nav.classList.remove('open');menu?.setAttribute('aria-expanded','false');}});
+if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');observer.unobserve(e.target);}}),{threshold:.08});document.querySelectorAll('.service-row,.story,.gallery figure,.step,.contact-invite').forEach(e=>{e.classList.add('will-reveal');observer.observe(e);});}
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.querySelectorAll('[data-tone]').forEach(c=>c.hidden=button.dataset.filter!=='all'&&c.dataset.tone!==button.dataset.filter);}));

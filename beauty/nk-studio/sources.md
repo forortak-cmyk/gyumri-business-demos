@@ -1,11 +1,30 @@
-# N.K Studio
+# N.K Studio — second batch
 Checked 2026-11-15.
-Source: https://www.beautynailhairsalons.com/AM/Gyumri/355189728561112/N.K-beauty-studio
-Social: https://www.facebook.com/355189728561112/
-Phone: +37498285067
-Address: Գյումրի, Շիրակացի 60Բ
-No standalone official website found through name+Gyumri searches. Absence is not definitive. Owner verification required before outreach.
-Prices unavailable; no invented prices. Booking disabled. No client testimonials.
-Imagery: illustrative Unsplash stock, labelled visibly as not salon photos.
-Salon: https://images.unsplash.com/photo-1562322140-8baeececf3df
-Makeup: https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9
+{
+  "slug": "nk-studio",
+  "name": "N.K Studio",
+  "tag": "AESTHETIC & BEAUTY",
+  "theme": "sage",
+  "title": "Խնամք՝ Ձեր ռիթմով։",
+  "intro": "Վարսահարդարում, դիմահարդարում և էսթետիկ խնամք՝ Գյումրու Շիրակացի փողոցում։ Բացահայտեք ծառայությունները և կապվեք սրահի հետ՝ այցը համաձայնեցնելու համար։",
+  "phone": "+37498285067",
+  "address": "Գյումրի, Շիրակացի 60Բ",
+  "social": "https://www.facebook.com/355189728561112/",
+  "source": "https://www.beautynailhairsalons.com/AM/Gyumri/355189728561112/N.K-beauty-studio",
+  "services": [
+    [
+      "Վարսահարդարում",
+      "Կտրվածք, սանրվածք և մազերի խնամք։"
+    ],
+    [
+      "Դիմահարդարում",
+      "Ձեր առիթին համապատասխան կերպարի ընտրություն։"
+    ],
+    [
+      "Էսթետիկ խնամք",
+      "Ծառայությունների և համապատասխանության մասին հարցերը քննարկեք մասնագետի հետ։"
+    ]
+  ]
+}
+
+Design photography is illustrative Unsplash stock, visibly labelled. No client photos, testimonials, confirmed prices, booking system or outcome promises invented.
